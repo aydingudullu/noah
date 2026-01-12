@@ -398,35 +398,11 @@
 
     <!-- Floating Save Button -->
     <div class="floating-action">
-        <a href="#" class="save-btn" onclick="saveContact()">
+        <a href="nuh_ongun.vcf" class="save-btn" download="Nuh_Ongun_Noah_Group.vcf">
             <i class="ri-user-add-fill"></i>
             <span>Rehbere Kaydet</span>
         </a>
     </div>
-
-    <script>
-        function saveContact() {
-            const vcard = `BEGIN:VCARD
-VERSION:3.0
-FN:Nuh ÖNGÜN
-N:ÖNGÜN;Nuh;;;
-ORG:Noah Group
-TEL;TYPE=CELL,VOICE:+905070514879
-EMAIL;TYPE=INTERNET,WORK:nuh@noahgroup.com.tr
-URL:https://www.noahgroup.com.tr
-ADR;TYPE=WORK:;;Bahçelievler Mh. D-100 Yanyolu Sk. Metroport Business No:148 Kat:7 No:703;Bahçelievler;İstanbul;34180;Turkey
-ADR;TYPE=WORK:;;Yeşilkent Mh. Nazım Hikmet Blv. E2 Blok No: 51/A İç Kapı No: 243;Esenyurt;İstanbul;34515;Turkey
-END:VCARD`;
-
-            const blob = new Blob([vcard], { type: 'text/vcard' });
-            const url = URL.createObjectURL(blob);
-            const newLink = document.createElement('a');
-            newLink.download = "Nuh_Ongun_Noah_Group.vcf";
-            newLink.textContent = "Download vCard";
-            newLink.href = url;
-            newLink.click();
-        }
-    </script>
 </body>
 
 </html>
